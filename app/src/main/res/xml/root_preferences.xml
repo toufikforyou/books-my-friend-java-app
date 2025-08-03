@@ -1,0 +1,68 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Display Settings">
+
+        <ListPreference
+            android:defaultValue="system"
+            android:dialogTitle="Choose Night Mode"
+            android:entries="@array/night_mode_options"
+            android:entryValues="@array/night_mode_values"
+            android:key="night_mode"
+            android:summary="Select your preferred mode"
+            android:title="@string/nightModeText"
+            app:icon="@drawable/g_dark_icon"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:defaultValue="default"
+            android:dialogTitle="Choose Theme"
+            android:enabled="false"
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_values"
+            android:key="theme"
+            android:summary="Choose the app theme"
+            android:title="@string/themeText"
+            app:icon="@drawable/g_light_theme"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:defaultValue="medium"
+            android:dialogTitle="Choose Font Size"
+            android:entries="@array/font_size_options"
+            android:entryValues="@array/font_size_values"
+            android:key="font_size"
+            android:summary="Adjust font size"
+            android:title="@string/fontSizeText"
+            app:icon="@drawable/g_font_icon"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:defaultValue="locate"
+            android:dialogTitle="Choose Language"
+            android:entries="@array/language_options"
+            android:entryValues="@array/language_values"
+            android:key="language"
+            android:summary="Choose the app language"
+            android:title="@string/languageText"
+            app:defaultValue="any"
+            app:icon="@drawable/g_language_icon"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notification Settings">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:enabled="false"
+            android:key="notifications"
+            android:summary="Enable or disable notifications"
+            android:summaryOff="Disable"
+            android:summaryOn="Enable"
+            android:title="@string/notificationsText"
+            app:icon="@drawable/g_notifications_icon" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

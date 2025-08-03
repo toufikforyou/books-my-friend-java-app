@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/ic_notification_icon"
+        android:title="Notification"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_icon"
+        android:title="Search"
+        android:visible="false"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_left_icon"
+        android:title="Log Out"
+        android:visible="false" />
+    <item
+        android:id="@+id/create_book"
+        android:icon="@drawable/ic_add_icon"
+        android:title="Create Book"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/create_book_chapter"
+        android:icon="@drawable/g_add_icon"
+        android:title="Create Book Chapter"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/update_book_info"
+        android:icon="@drawable/g_sync_update_icon"
+        android:title="Update Book Info"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/delete_my_book"
+        android:icon="@drawable/g_delete_icon"
+        android:title="Delete my book"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+</menu>

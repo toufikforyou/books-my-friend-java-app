@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/ServicesGroup">
+        <item
+            android:id="@+id/app_nav_home"
+            android:icon="@drawable/ic_home_icon"
+            android:title="@string/navHomeText" />
+        <item
+            android:id="@+id/app_nav_favourite"
+            android:icon="@drawable/ic_favorite_icon"
+            android:title="@string/navFavoriteBooksText" />
+        <item
+            android:id="@+id/app_nav_workFlow"
+            android:icon="@drawable/ic_work_flow_icon"
+            android:title="@string/navWorkFlowText" />
+        <item
+            android:id="@+id/app_nav_update"
+            android:icon="@drawable/ic_update_icon"
+            android:title="@string/navUpdateText" />
+    </group>
+
+    <group android:id="@+id/ApplicationToolsGroup">
+        <item android:title="@string/navCatAppToolsText">
+            <menu>
+                <item
+                    android:id="@+id/app_nav_privacy_policy"
+                    android:icon="@drawable/ic_privacy_policy_icon"
+                    android:title="@string/navPrivacyPolicyText" />
+                <item
+                    android:id="@+id/app_nav_terms_condition"
+                    android:icon="@drawable/ic_terms_and_conditions_icon"
+                    android:title="@string/navTermsConditionsText" />
+                <item
+                    android:id="@+id/app_nav_setting"
+                    android:icon="@drawable/g_settings_icon"
+                    android:title="@string/navSettingText" />
+            </menu>
+        </item>
+    </group>
+
+    <group android:id="@+id/CommunicationsGroup">
+        <item android:title="@string/navCatCommunicationText">
+            <menu>
+                <item
+                    android:id="@+id/app_nav_contact_us"
+                    android:icon="@drawable/ic_support_icon"
+                    android:title="@string/navContactUsText" />
+                <item
+                    android:id="@+id/app_nav_faq"
+                    android:icon="@drawable/ic_connect_icon"
+                    android:title="@string/navFaqText" />
+                <item
+                    android:id="@+id/app_nav_invite"
+                    android:icon="@drawable/ic_invite_icon"
+                    android:title="@string/navInviteFriendsText" />
+                <item
+                    android:id="@+id/app_nav_shire"
+                    android:icon="@drawable/ic_link_icon"
+                    android:title="@string/navShareText" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

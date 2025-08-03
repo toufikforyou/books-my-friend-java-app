@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="night_mode_options">
+        <item>@string/selectSystemText</item>
+        <item>@string/selectLightText</item>
+        <item>@string/selectNightText</item>
+    </string-array>
+    <string-array name="night_mode_values">
+        <item>system</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
+    <string-array name="theme_options">
+        <item>@string/commonDefaultText</item>
+        <item>@string/selectLightText</item>
+        <item>@string/selectNightText</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>default</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
+    <string-array name="font_size_options">
+        <item>@string/selectSmallText</item>
+        <item>@string/selectMediumText</item>
+        <item>@string/selectLargeText</item>
+    </string-array>
+    <string-array name="font_size_values">
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>@string/selectLocateText</item>
+        <item>@string/selectBanglaText</item>
+        <item>@string/selectEnglishText</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>any</item>
+        <item>bn</item>
+        <item>en</item>
+    </string-array>
+</resources>

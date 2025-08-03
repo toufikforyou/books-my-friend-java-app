@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/userGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hind_regular"
+        android:text="@string/selectGenderText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/userGenderGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userGender"
+        android:layout_marginVertical="20dp">
+
+        <RadioGroup
+            android:id="@+id/genderG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            tools:ignore="UselessParent">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/userMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_selector"
+                android:button="@drawable/custom_radio_null_selected"
+                android:drawableStart="@drawable/ic_male_icon"
+                android:drawablePadding="5dp"
+                android:drawableTint="@drawable/custom_radio_text_selector"
+                android:fontFamily="@font/hind_regular"
+                android:paddingHorizontal="15dp"
+                android:paddingStart="12dp"
+                android:text="@string/maleText"
+                android:textColor="@drawable/custom_radio_text_selector"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,RtlSymmetry,UnusedAttribute" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/userFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_selector"
+                android:button="@drawable/custom_radio_null_selected"
+                android:drawableStart="@drawable/ic_female_icon"
+                android:drawablePadding="5dp"
+                android:drawableTint="@drawable/custom_radio_text_selector"
+                android:fontFamily="@font/hind_regular"
+                android:paddingHorizontal="15dp"
+                android:paddingStart="12dp"
+                android:text="@string/feMaleText"
+                android:textColor="@drawable/custom_radio_text_selector"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText,RtlSymmetry,UnusedAttribute" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/userOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_selector"
+                android:button="@drawable/custom_radio_null_selected"
+                android:drawableStart="@drawable/ic_transgender_icon"
+                android:drawablePadding="5dp"
+                android:drawableTint="@drawable/custom_radio_text_selector"
+                android:fontFamily="@font/hind_regular"
+                android:paddingHorizontal="15dp"
+                android:paddingStart="12dp"
+                android:text="@string/otherGenderText"
+                android:textColor="@drawable/custom_radio_text_selector"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText,RtlSymmetry,UnusedAttribute" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/userGenderGroup"
+        android:layout_marginVertical="10dp"
+        android:background="?attr/colorOutline" />
+
+    <TextView
+        android:id="@+id/userDateOfBirthText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userGenderGroup"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/hind_regular"
+        android:text="@string/selectAgeText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <DatePicker
+        android:id="@+id/user_picker_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userDateOfBirthText"
+        android:layout_centerInParent="true"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:focusable="true"
+        android:spinnersShown="true" />
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation.xml"
+    app:startDestination="@id/app_nav_home">
+
+    <fragment
+        android:id="@+id/app_nav_home"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Fragments.BottomNavigation.NavHomeFragment"
+        android:label="fragment_nav_home"
+        tools:layout="@layout/fragment_nav_home" />
+    <fragment
+        android:id="@+id/nav_my_books"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Fragments.BottomNavigation.MyBooksFragment"
+        android:label="fragment_my_books"
+        tools:layout="@layout/fragment_my_books">
+        <action
+            android:id="@+id/action_nav_my_books_to_createBookActivity"
+            app:destination="@id/createBookActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_download"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Fragments.BottomNavigation.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" />
+    <fragment
+        android:id="@+id/nav_news_feed"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Fragments.BottomNavigation.NewsFeedFragment"
+        android:label="fragment_news_feed"
+        tools:layout="@layout/fragment_news_feed" />
+    <fragment
+        android:id="@+id/app_nav_invite"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Fragments.Navigation.InviteFragment"
+        android:label="fragment_invite"
+        tools:layout="@layout/fragment_invite" />
+    <activity
+        android:id="@+id/app_nav_setting"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Activities.Navigation.SettingsActivity"
+        android:label="SettingsActivity" />
+    <activity
+        android:id="@+id/createBookActivity"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Activities.MyBooks.CreateBookActivity"
+        android:label="activity_create_my_books"
+        tools:layout="@layout/activity_create_my_book" />
+</navigation>

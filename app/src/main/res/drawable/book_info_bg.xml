@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="-5dp"
+        android:right="-5dp"
+        android:top="-5dp">
+
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:endColor="@android:color/transparent"
+                android:startColor="?attr/colorPrimaryContainer" />
+            <stroke
+                android:width="2dp"
+                android:color="?attr/colorPrimary"
+                android:dashWidth="@dimen/cardview_default_radius"
+                android:dashGap="@dimen/cardview_compat_inset_shadow" />
+        </shape>
+    </item>
+</layer-list>

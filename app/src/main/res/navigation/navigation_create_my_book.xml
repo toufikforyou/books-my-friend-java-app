@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_create_my_book"
+    app:startDestination="@id/chapterViewFragment">
+
+    <fragment
+        android:id="@+id/chapterViewFragment"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Fragments.MyBooks.ChapterViewFragment"
+        android:label="fragment_chapter_view"
+        tools:layout="@layout/fragment_chapter_view">
+        <action
+            android:id="@+id/action_chapterViewFragment_to_createBooksFragment"
+            app:destination="@id/createBooksFragment" />
+        <action
+            android:id="@+id/action_chapterViewFragment_to_createMyChapterFragment"
+            app:destination="@id/createMyChapterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createBooksFragment"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Fragments.MyBooks.CreateBooksFragment"
+        android:label="fragment_create_books"
+        tools:layout="@layout/fragment_create_books">
+        <action
+            android:id="@+id/action_createBooksFragment_to_chapterViewFragment"
+            app:destination="@id/chapterViewFragment"
+            app:popUpTo="@id/chapterViewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createMyChapterFragment"
+        android:name="com.sopnolikhi.booksmyfriend.Design.Ui.Fragments.MyBooks.CreateMyChapterFragment"
+        android:label="fragment_create_my_chapter"
+        tools:layout="@layout/fragment_create_my_chapter" />
+</navigation>

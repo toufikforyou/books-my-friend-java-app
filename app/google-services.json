@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "974490944937",
+    "project_id": "books-my-friend",
+    "storage_bucket": "books-my-friend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974490944937:android:6e432b7cecde3fce5a70b8",
+        "android_client_info": {
+          "package_name": "com.sopnolikhi.java.booksmyfriend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974490944937-k83h4f4vei7q5088ok6sgq4n8is4aork.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXV8USURgcbUGVh4VuAWwuiVclRv4d2AU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974490944937-k83h4f4vei7q5088ok6sgq4n8is4aork.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
