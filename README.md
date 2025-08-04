@@ -5,6 +5,7 @@ Books my friend is an Android application (using java) that allows users to brow
 * Browse a wide variety of books
 * Read books directly within the app
 * User-friendly interface
+* Test login functionality : email: `toufikforyou@gmail.com`, password: `#password`
 
 ## Dependencies
 * [Google Play Services Location](https://developers.google.com/android/guides/location-overview): Used for location-based services.
