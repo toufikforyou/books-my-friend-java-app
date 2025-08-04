@@ -32,4 +32,21 @@ public class LogInResData {
     public String getExpired() {
         return expired;
     }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setUserId(String uid) {
+        this.uid = uid;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public void setExpired(String expired) {
+        this.expired = expired;
+    }
+
 }

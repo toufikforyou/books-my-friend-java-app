@@ -1,7 +1,5 @@
 package com.sopnolikhi.booksmyfriend.Services.Repositories.Account.Authentication.SingIn;
 
-import android.content.Context;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
@@ -23,12 +21,10 @@ import retrofit2.Response;
 
 public class SignInRepository {
     private final AccountApiService accountApiService;
-    private final Context context;
 
     MutableLiveData<ApiResponseModel<LogInResData>> logInLiveData;
 
-    public SignInRepository(Context context) {
-        this.context = context;
+    public SignInRepository() {
         this.accountApiService = AccountApiInstance.getRetrofit().create(AccountApiService.class);
     }
 
@@ -44,7 +40,19 @@ public class SignInRepository {
 
         logInLiveData.postValue(new ApiResponseModel.Loading<>());
 
-        accountApiService.getLoginAccount(loginRequestModel).enqueue(new Callback<LoginResponseModel>() {
+        // Debugging purpose: Mocked login for specific account
+        if (account.equals("toufikforyou@gmail.com") && password.equals("#password")) {
+            LogInResData logInResData = new LogInResData();
+            logInResData.setFullName("MH TOUFIK");
+            logInResData.setUserId("123546789");
+            logInResData.setExpired("2025-10-01 12:00:00");
+            logInResData.setToken("mocked_token_1234567890");
+
+            logInLiveData.postValue(new ApiResponseModel.SuccessCode<>(1000, "Mocked Login Success", logInResData));
+            return;
+        }
+        // Actual API call for login
+        accountApiService.getLoginAccount(loginRequestModel).enqueue(new Callback<>() {
             @Override
             public void onResponse(@NonNull Call<LoginResponseModel> call, @NonNull Response<LoginResponseModel> response) {
                 if (response.isSuccessful() && response.body() != null) {

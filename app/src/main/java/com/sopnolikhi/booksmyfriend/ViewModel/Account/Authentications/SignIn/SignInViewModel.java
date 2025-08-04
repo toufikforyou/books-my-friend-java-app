@@ -15,7 +15,7 @@ public class SignInViewModel extends AndroidViewModel {
 
     public SignInViewModel(@NonNull Application application) {
         super(application);
-        this.signInRepository = new SignInRepository(application);
+        this.signInRepository = new SignInRepository();
     }
 
     public LiveData<ApiResponseModel<LogInResData>> getLogInResult() {

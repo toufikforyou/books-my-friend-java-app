@@ -4,6 +4,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -70,13 +71,13 @@ public class LoginSession {
 
             setFullName(sharedPreferences.getString(KEY_USER_FULLNAME, ""));
             setUserToken(sharedPreferences.getString(KEY_USER_TOKEN, ""));
-            setUserId(String.valueOf(sharedPreferences.getString(KEY_USER_ID, "")));
+            setUserId(sharedPreferences.getString(KEY_USER_ID, ""));
 
             return currentDate.after(expirationDate);
         } catch (ParseException e) {
-            e.printStackTrace();
+            Log.d("LoginSession", "Error parsing expiration date: " + e.getMessage());
         }
-        return true; // Treat as expired if there's a parsing error
+        return true;
     }
 
     public void logout() {
