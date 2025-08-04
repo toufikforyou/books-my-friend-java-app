@@ -57,7 +57,7 @@ public class InviteFragment extends Fragment {
 
         inviteBinding.retryBtn.setOnClickListener(v -> setContactViewModelRecycleView());
 
-        inviteBinding.swipeRefreshMyContact.setOnRefreshListener(this::setContactViewModelRecycleView);
+        // inviteBinding.swipeRefreshMyContact.setOnRefreshListener(this::setContactViewModelRecycleView);
 
     }
 
@@ -69,7 +69,7 @@ public class InviteFragment extends Fragment {
                 contactViewModel = new ViewModelProvider(requireActivity()).get(ContactViewModel.class);
             }
             contactViewModel.getContactList().observe(requireActivity(), inviteContactLists -> {
-                inviteBinding.swipeRefreshMyContact.setRefreshing(false);
+                // inviteBinding.swipeRefreshMyContact.setRefreshing(false);
                 contactAdapter.submitList(inviteContactLists);
                 inviteBinding.contactInvite.setAdapter(contactAdapter);
             });

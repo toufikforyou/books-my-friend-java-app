@@ -69,7 +69,7 @@ public class MyBooksFragment extends Fragment implements BookClickInterface {
         myBooksBinding.myBooksListRecyclerView.setHasFixedSize(true);
 
         myAllBooksViewModel.getMyAllBooksLiveData().observe(getViewLifecycleOwner(), myAllBooksResData -> {
-            myBooksBinding.swipeRefreshMyBooks.setRefreshing(false);
+            // myBooksBinding.swipeRefreshMyBooks.setRefreshing(false);
             myBooksBinding.progressBar.setVisibility(View.GONE);
             myBooksBinding.errorSmgLayout.setVisibility(View.GONE);
 
@@ -93,7 +93,7 @@ public class MyBooksFragment extends Fragment implements BookClickInterface {
 
         getFetchBooks();
 
-        myBooksBinding.swipeRefreshMyBooks.setOnRefreshListener(this::getFetchBooks);
+        // myBooksBinding.swipeRefreshMyBooks.setOnRefreshListener(this::getFetchBooks);
     }
 
     private void getFetchBooks() {

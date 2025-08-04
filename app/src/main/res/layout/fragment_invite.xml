@@ -22,17 +22,10 @@
 
     </LinearLayout>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefreshMyContact"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contact_invite"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/contact_invite"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/single_contact_item" />
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/single_contact_item" />
 
 </LinearLayout>

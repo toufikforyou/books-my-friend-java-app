@@ -19,18 +19,15 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            /* publish app then uncomment the code
-            * minifyEnabled true
-            * shrinkResources true
-            * debuggable false
-            */
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding true
@@ -111,5 +108,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-inappmessaging-display'
-    implementation 'com.google.firebase:firebase-dynamic-links'
+    // implementation 'com.google.firebase:firebase-dynamic-links'
 }
